@@ -19,6 +19,10 @@ const generarQR = (texto) => {
             throw new Error('El texto no puede estar vacío');
         }
 
+                                               
+        document.getElementById('// Limpiar el contenedor del código QR
+        document.getElementById('contenedor-qr').innerHTML = '';
+
                               
         const qrCode = new QRCode(document.getElementById('// Crear el código QR
         const qrCode = new QRCode(document.getElementById('contenedor-qr'), {
@@ -29,6 +33,7 @@ const generarQR = (texto) => {
             colorLight: '#fff',
             correctLevel: QRCode.CorrectLevel.H
         });
+        console.log('Código QR generado correctamente');
     } catch (error) {
         console.error(error);
         alert('Error al generar el código QR: ' + error.message);
@@ -58,8 +63,11 @@ const handleButtonClick = () => {
 };
 
                                    
-document.getElementById('// Agregar evento de clic al botón
-document.getElementById('generar-qr').addEventListener('click', (e) => {
-    e.preventDefault();
-    handleButtonClick();
-});
+script.onload = () => {
+    document.getElementById('// Agregar evento de clic al botón
+script.onload = () => {
+    document.getElementById('generar-qr').addEventListener('click', (e) => {
+        e.preventDefault();
+        handleButtonClick();
+    });
+};
