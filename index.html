@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Códigos QR</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Generador de Códigos QR</h1>
+    </header>
+    <main>
+        <section class="formulario">
+            <h2>Ingrese el texto para generar el código QR</h2>
+            <form id="formulario-qr">
+                <label for="texto-qr">Texto:</label>
+                <input type="text" id="texto-qr" required>
+                <button id="generar-qr">Generar Código QR</button>
+            </form>
+            <div id="contenedor-qr"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
