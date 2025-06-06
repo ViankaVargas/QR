@@ -1,30 +1,8 @@
-// Importar la biblioteca QRCode.js
-const script = document.createElement('script');
-script.src = 'https:                                                     
-document.head.appendChild(script);
-
-                                      
-const generarQR = (texto) => {
-    try {
-                                          
-        if (!texto) {
-            throw new Error('//cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js';
-document.head.appendChild(script);
-
-// Función para generar el código QR
-const generarQR = (texto) => {
-    try {
-        // Verificar si el texto es vacío
-        if (!texto) {
-            throw new Error('El texto no puede estar vacío');
-        }
-
-                                               
-        document.getElementById('// Limpiar el contenedor del código QR
+// No es necesario agregar nada más, este es el código completo
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('generar-qr').addEventListener('click', () => {
+        const texto = document.getElementById('texto-qr').value;
         document.getElementById('contenedor-qr').innerHTML = '';
-
-                              
-        const qrCode = new QRCode(document.getElementById('// Crear el código QR
         const qrCode = new QRCode(document.getElementById('contenedor-qr'), {
             text: texto,
             width: 200,
@@ -33,41 +11,8 @@ const generarQR = (texto) => {
             colorLight: '#fff',
             correctLevel: QRCode.CorrectLevel.H
         });
-        console.log('Código QR generado correctamente');
-    } catch (error) {
-        console.error(error);
-        alert('Error al generar el código QR: ' + error.message);
-    }
-};
-
-                                                       
-const handleButtonClick = () => {
-    try {
-                                     
-        const texto = document.getElementById('// Función para manejar el evento de clic en el botón
-const handleButtonClick = () => {
-    try {
-        // Obtener el texto del input
-        const texto = document.getElementById('texto-qr').value.trim();
-
-                                
-        generarQR(texto);
-    } catch (error) {
-        console.error(error);
-        alert('// Generar el código QR
-        generarQR(texto);
-    } catch (error) {
-        console.error(error);
-        alert('Error al generar el código QR: ' + error.message);
-    }
-};
-
-                                   
-script.onload = () => {
-    document.getElementById('// Agregar evento de clic al botón
-script.onload = () => {
-    document.getElementById('generar-qr').addEventListener('click', (e) => {
-        e.preventDefault();
-        handleButtonClick();
     });
-};
+
+    // Generar el código QR automáticamente al cargar la página
+    document.getElementById('generar-qr').click();
+});
